@@ -2,7 +2,9 @@
 
 def read_output_recipes(file)
   f = open(file)
-  f.each { |line| print line }
+  f.each { |line| 
+    puts "#{f.lineno}: #{line}"
+  }
   f.close
 end
 
