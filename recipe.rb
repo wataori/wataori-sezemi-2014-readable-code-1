@@ -1,9 +1,9 @@
 # coding: utf-8
 
-def read_recipe(file)
-  File::open(file) { |f|
-    f.each {|line| print line}
-  }
+def read_output_recipes(file)
+  f = open(file)
+  f.each { |line| print line }
+  f.close
 end
 
-read_recipe('recipe-data.txt')
+read_output_recipes('recipe-data.txt')
